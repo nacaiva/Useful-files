@@ -1,0 +1,34 @@
+# Git
+
+https://www.atlassian.com/git/
+http://learngitbranching.js.org/
+
+# Spring
+https://spring.io/guides
+
+# SpringJPA
+http://projects.spring.io/spring-data-jpa/
+http://docs.spring.io/spring-data/jpa/docs/1.10.5.RELEASE/reference/html/
+
+
+# Spring Boot
+https://www.youtube.com/watch?v=p8AdyMlpmPk
+https://www.youtube.com/watch?v=47xNBNd-LLI
+https://www.youtube.com/watch?v=HCyYEVRZISk
+
+# Spring Data
+https://www.youtube.com/watch?v=O8-Jm-QfDBA
+
+# REST
+http://www.restapitutorial.com/lessons/restfulresourcenaming.html
+http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+
+#GitLab
+https://gitlab.sixsentix.com/Internship
+https://gitlab.sixsentix.com/Internship/nivanovic
+
+# HTML i JavaScript
+http://api.jquery.com/
+https://developer.mozilla.org/en-US/
+* HTTP status codes
+https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection

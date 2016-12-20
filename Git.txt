@@ -1,0 +1,26 @@
+HEAD^ :vraca za jedno izvrsavanje unazad
+HEAD~<broj> :vraca za <broj> unazad
+git branch -f master HEAD~3 : premesta master na HEAD~3 mesto
+git reset HEAD~1
+git revert HEAD
+git cherry-pick <Commit1> <Commit2><...>
+git rebase -i HEAD~3
+git commit --amend :modifikacija
+git tag v1 C1
+git descrtibe <ref>
+<ref>: <tag>_<numCommits>_g<hash>
+// <tag> - closest ancestor; <numCommits> - how many commits away from that tag; <hash> hash of the commit being descrtibed
+git checkout master^ - prvi roditelj
+git checkout master^2 - drugi roditelj
+git checkout HEAD~^2~2 
+git clone
+
+REMOTE
+<remote name> / <branch name> : o/master
+git checkout o/master
+git fetch -update/download remote gita
+git pull (fetch+merge)
+git fakeTeamwork <master 3>
+git push - upload
+
+...

@@ -1,0 +1,133 @@
+# log
+git log - show commit logs (Space to scroll, q to exit)
+git log -n <limikt> - limit the number of commits
+git log oneline - shows hash and message of commits
+git log -stat
+git log -p - shows the full diff of each commit
+git log --author=<pattern>
+git log --grep=<pattern> - message
+git log <since>..<until>
+
+#init
+*.git it has to bee in the directory of the root directory (where is source)
+*.git it has to be in a project
+git init
+
+#config
+*defines name and email of author that will do all commits on this mashine
+git config --global user.name Natalija Ivanovic
+git config --global user.email natalija.git ivanovic@qacube.com
+
+git config --global alias.<alias-name> <git-command> - create a shortcut for git command
+git config --system core.editor <editor> - define a editor that wil be used at this mashine
+git config --global --edit - opening editor
+
+# add
+*adds a change in the working directory to the staging area
+*changes are not actually recorded until you run commit
+*.exe se ne dodaje u git
+git add <file> (src, pom.xml, gitignore)
+
+# -> status
+git status -  to view the state of working directory and the staging area
+
+# commit
+git commit- commits the staged snapshot to the project history
+git commit -m <message> - instead of launching a text editor, use <message> as the commit message
+git commit -a - commit a snapshot of all changes in the working direcotory
+
+#revert
+*this command undoes a committed scanpshot, but it don't remove all committs, it just undo changes by appending 
+a new commit . THis prevents Git from losing history
+git revert <commit> - generate a new commit that undo all the changes
+
+
+# reset
+*this is a permanent undo, no way to retrieve the original copy
+*reset current HEAD to the specified state
+git reset <file> - removes a specified file from the staging area
+git reset - reset the staging area to match the most recent commit
+git reset <commit> - move the current branch tip backword to <commit>
+git reset @~1 - @ head
+
+#clean
+*this command removes untracked files from your working direcotory (ths is undoable)
+git clean -n -  shows you which files are going to be removed without actually doing it
+git clean -f - remove untracked files from the current direcotory (except .gitignore)
+git clean -f <path> limit the operation to the specified path
+git clean -df - files and direcotories from the current direcotory
+git cleam -xf - +files that git usually ignores
+
+
+# diff
+git diff - show changes between commits, commit and working three etc
+git diff --staged
+
+#show
+git show - shows the HEAD commit
+git show <param>
+
+# checkout
+*checking out files, checking out commits and checking out branches
+git checkout master - return to the master branch, back to the "current" state of the project
+git checkout <commit> <file> checkout a previous version of file 
+git checkout <commit> - update all filees in the working directory to match the specified commit
+
+# rm
+rm -rf deletes recursively
+rm -rf .git
+
+#commit --amend
+*lets you combine staged changes with the previous commit istead of committing it as an entierly new snapshot
+*it replace the commit entierly
+git commit --amend
+
+# rebase
+*rebasing is the process of moving a branch to a new base commit
+*rebasing is moving a branch form one commit to another, git creats new commits and applying them to the specified base,
+*rewriting project history, maintaining a linear project history 
+git rebase <base> - rebase the current branch onto <base>
+
+#reflog
+git reflog - show the reflog for the local repository
+git reflog --relative-date - show the reflog with relative-date information
+
+# fetch
+*imports commits from a remote repository into your local repository
+*commits are stored as remote branches instead of the normal local branches
+git fetch <remote> - fetch all the branches from the repository
+git fetch <remote> <branch> - fetch the specified branch
+*it has no effect on your local development work, this makes fetching a safe way to reviw commits before integrating 
+them with your local repository
+git branch -r - to view remote branches, so there will be no mixing with local branches
+
+# pull
+*merging upstream changes into local repository
+git pull <remote> - fetch the specified remote's copy of the current branch and immediately merge it into local copy
+*(fetch + merge)
+* git fetch <remote> => git merge origin/<current-branch>
+git pull --rebase <remote> - same, but instead of using git merge it use git rebase, ensures a linear history 
+
+# push
+* transfer commits from your local repository to a remote repo , exports commits to remote branches
+git push <remote> <branch> - push the specified branch to <remote>, along with all of the necessary 
+commits and internal objects
+git push <remote> --all - push all of your local branches to the specified remote
+git push origin --all --force
+
+man command_name
+git <command> --help
+
+# tag
+git tag
+git tag v<number>
+git tag -a v<number> -m "message"
+git push origin v<number>
+git tag -d v<number> - delete local tag
+git push origin :v<numer> - delete remote tag
+
+vim -> editor
+vim <file>
+.mvn/
+mvnw
+mvnw.cmd
